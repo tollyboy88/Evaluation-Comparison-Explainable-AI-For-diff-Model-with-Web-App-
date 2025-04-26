@@ -1,0 +1,7 @@
+SHAP Summary Plot (shap_summary.png):
+This plot shows the impact of each feature on the model's predictions across all test samples.
+Features are ranked by importance (top to bottom). Red indicates a positive impact on the prediction, blue indicates a negative impact.
+
+SHAP Force Plot (shap_force.png):
+This plot shows the contribution of each feature to the prediction for the first test sample.
+Features pushing the prediction higher are in red, and those pushing it lower are in blue.

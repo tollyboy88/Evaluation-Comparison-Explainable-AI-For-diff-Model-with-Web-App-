@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 45%;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+        {% if probability %}
+            <p><strong>Probability:</strong> {{ probability }}</p>
+        {% endif %}
+        
+        <h2>SHAP Explanation</h2>
+        <img src="data:image/png;base64,{{ shap_plot }}" alt="SHAP Force Plot">
+        <p>{{ explanation }}</p>
+        
+        <h2>Additional Visualizations</h2>
+        <div class="image-container">
+            {% for filename, img_base64 in images.items() %}
+                <div>
+                    <img src="data:image/png;base64,{{ img_base64 }}" alt="{{ filename }}">
+                    <p>{{ filename }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

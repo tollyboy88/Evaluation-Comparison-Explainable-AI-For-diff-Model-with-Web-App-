@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br>
+        <label for="sex">Sex (1 = male, 0 = female):</label>
+        <input type="text" id="sex" name="sex"><br>
+        <label for="cp">Chest Pain Type (0-3):</label>
+        <input type="text" id="cp" name="cp"><br>
+        <label for="trestbps">Resting Blood Pressure (mm Hg):</label>
+        <input type="text" id="trestbps" name="trestbps"><br>
+        <label for="chol">Serum Cholesterol (mg/dl):</label>
+        <input type="text" id="chol" name="chol"><br>
+        <label for="fbs">Fasting Blood Sugar > 120 mg/dl (1 = true, 0 = false):</label>
+        <input type="text" id="fbs" name="fbs"><br>
+        <label for="restecg">Resting Electrocardiographic Results (0-2):</label>
+        <input type="text" id="restecg" name="restecg"><br>
+        <label for="thalach">Maximum Heart Rate Achieved:</label>
+        <input type="text" id="thalach" name="thalach"><br>
+        <label for="exang">Exercise Induced Angina (1 = yes, 0 = no):</label>
+        <input type="text" id="exang" name="exang"><br>
+        <label for="oldpeak">ST Depression Induced by Exercise:</label>
+        <input type="text" id="oldpeak" name="oldpeak"><br>
+        <label for="slope">Slope of the Peak Exercise ST Segment (0-2):</label>
+        <input type="text" id="slope" name="slope"><br>
+        <label for="ca">Number of Major Vessels (0-3):</label>
+        <input type="text" id="ca" name="ca"><br>
+        <label for="thal">Thalassemia (3 = normal, 6 = fixed, 7 = reversible):</label>
+        <input type="text" id="thal" name="thal"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
