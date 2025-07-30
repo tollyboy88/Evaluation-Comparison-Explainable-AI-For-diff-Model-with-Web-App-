@@ -8,7 +8,7 @@
 
 There are several ways to edit the application code for this project.
 
-**Use xAI Platform**
+**Use any IDE Platform you are comfortable with**
 
 Simply visit the (https://github.com/tollyboy88/Evaluation-Comparison-Explainable-AI-For-diff-Model-with-Web-App-/tree/main) and start prompting to modify the code. Changes made via the xAI platform will be automatically committed to this repository.
 
